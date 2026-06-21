@@ -1,0 +1,40 @@
+<?php
+
+class App
+{
+    private $controller = 'Auth';
+    private $metodo = 'index';
+    private $parametros = [];
+
+    public function __construct()
+    {
+        $url = $this->lerUrl();
+
+        if (isset($url[0]) && file_exists('../app/controllers/' . ucfirst($url[0]) . '.php')) {
+            $this->controller = ucfirst($url[0]);
+            unset($url[0]);
+        }
+
+        require_once '../app/controllers/' . $this->controller . '.php';
+        $this->controller = new $this->controller;
+
+        if (isset($url[1]) && method_exists($this->controller, $url[1])) {
+            $this->metodo = $url[1];
+            unset($url[1]);
+        }
+
+        $this->parametros = $url ? array_values($url) : [];
+
+        call_user_func_array([$this->controller, $this->metodo], $this->parametros);
+    }
+
+    private function lerUrl()
+    {
+        if (isset($_GET['url'])) {
+            $url = rtrim($_GET['url'], '/');
+            $url = filter_var($url, FILTER_SANITIZE_URL);
+            return explode('/', $url);
+        }
+        return [];
+    }
+}

@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+}
+
+.topo {
+    background-color: #2d6cdf;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+}
+
+.topo .logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.topo nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.topo nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 16px;
+}
+
+.card-auth, .card-form {
+    background: #fff;
+    max-width: 380px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card-form {
+    max-width: 480px;
+    margin: 30px auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+label {
+    display: block;
+    margin: 12px 0 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+button {
+    margin-top: 18px;
+    width: 100%;
+    padding: 11px;
+    background-color: #2d6cdf;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1f57bd;
+}
+
+.link {
+    margin-top: 16px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.erro {
+    background: #ffe0e0;
+    color: #b30000;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.cabecalho-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #2d6cdf;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+th {
+    background-color: #f5f6f7;
+}
+
+.acoes a {
+    margin-right: 10px;
+    color: #2d6cdf;
+    text-decoration: none;
+}
+
+.vazio {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    color: #777;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-cancelar {
+    margin-top: 18px;
+    display: inline-block;
+    padding: 11px 16px;
+    background: #e4e6eb;
+    color: #1c1e21;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+}
